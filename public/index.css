@@ -1,0 +1,121 @@
+:root {
+    --color1: rgb(34, 34, 34);
+    --text-color1: white;
+    --branding-color1: #414141;
+    --branding-color2: #535353;
+    --branding-color3: #ffb14a;
+}
+
+body {
+    margin: 0;
+    font-family: "Calibri", sans-serif;
+    color: var(--text-color1);
+    background-color: var(--color1);
+    overflow-x: hidden;
+}
+
+.app {
+    animation: open 0.3s ease-in-out;
+}
+
+.heading-cont {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.heading {
+    width: 96vw;
+    padding: 1vh;
+    background-color: var(--branding-color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color1);
+    text-align: center;
+    user-select: none;
+    height: 120px;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    border-bottom: 2px solid grey;
+}
+
+.heading .title {
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.heading .desc {
+    font-size: 1em;
+}
+
+.heading .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    margin-right: 20px;
+}
+
+.pass-cont {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.password {
+    width: 100vw;
+    height: calc(100vh - 150px - 50px);
+    width: 96vw;
+    padding: 1vh;
+    background-color: var(--branding-color2);
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    display: flex;
+    justify-content: center;
+}
+
+.password .generate {
+    background-color: var(--branding-color3);
+    width: 50vw;
+    border-radius: 0.6vh;
+    margin-top: 20px;
+    box-shadow: 0 0 1vh #00000055;
+    padding-right: 12px;
+}
+
+.password .generate input {
+    background-color: transparent;
+    padding: 2vh;
+    width: 98%;
+    border: none;
+}
+
+@keyframes open {
+    from {
+        transform: translateY(-70px) scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+.output {
+    padding: 20px;
+    background-color: rgb(255, 144, 103);
+    margin-top: 10px;
+    border-radius: 0.8vh;
+    height: 40vh;
+    width: 48vw;
+}
+
+.output p{
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+}
